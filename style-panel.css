@@ -1,0 +1,95 @@
+@font-face {
+    font-family: Lato;
+    src: url("fonts/Lato-Regular.ttf");
+}
+
+header a:link, header a:visited {
+    color: rgb(184, 59, 112);
+    text-decoration: none;
+}
+
+header a:hover, header a:active {
+    color: rgba(184, 59, 112, 0.5);
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-size: 100%;
+    font-family: Lato;
+}
+
+.lewa {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+    width: 30%;
+    background-image: url(images/panelzebra.png);
+    background-size: cover;
+}
+
+.prawa {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+    width: 66%;
+    padding: 0 2%;
+}
+
+header {
+    position: relative;
+}
+
+.akcja {
+    width: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+}
+
+nav {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    text-align: center;
+}
+
+nav a:link, nav a:visited {
+    display: block;
+    padding: 10px;
+    color: white;
+    background: grey;
+    text-decoration: none;
+    border: 2px outset grey;
+}
+
+nav a:hover, nav a:active {
+    display: block;
+    padding: 10px;
+    color: white;
+    background: #656565;
+    text-decoration: none;
+    border: 2px inset grey;
+}
+
+.clear {
+    clear: both;
+}
+
+input[type=submit] {
+    border: 2px outset grey;
+    border-radius: 5px;
+    background: rgb(184, 59, 112);
+    color: white;
+    padding: 10px;
+}

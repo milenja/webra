@@ -1,0 +1,375 @@
+@font-face {
+    font-family: Lato;
+    src: url("fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+    font-family: Neoteric;
+    src: url("fonts/Neoteric.ttf");
+}
+
+header a:link, header a:visited {
+    color: rgb(255, 231, 22);
+    text-decoration: none;
+}
+
+header a:hover, header a:active {
+    color: rgba(255, 231, 22, 0.5);
+    text-decoration: none;
+}
+
+.main a:link, .main a:visited {
+    color: rgb(184, 59, 112);
+    text-decoration: none;
+}
+
+.main a:hover, .main a:active {
+    color: grey;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-size: 100%;
+    font-family: Lato;
+    background: url(images/bo_play_pattern.png);
+}
+
+.calosc {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+}
+
+header {
+    padding: 20px 30px;
+    background-image: url(images/header.png);
+    background-size: cover;
+    box-shadow: 0 5px 5px grey;
+    position: relative;
+}
+
+.akcja {
+    width: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 10px;
+}
+
+header h1 {
+    color: white;
+    text-shadow: 0 2px 2px black;
+    text-transform: uppercase;
+    font-size: 4em;
+    font-family: Neoteric;
+    letter-spacing: 10px;
+    margin: 0;
+}
+
+header p {
+    color: white;
+    text-shadow: 0 2px 2px black;
+    text-transform: uppercase;
+    font-family: Neoteric;
+    letter-spacing: 10px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hl {
+    width: 45%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+}
+
+.hp {
+    width: 55%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: -4px;
+    padding-top: 70px;
+}
+
+nav {
+    text-align: right;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 0 2px 2px black;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    text-align: center;
+}
+
+nav a:link, nav a:visited {
+    display: block;
+    padding: 10px 25px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover, nav a:active {
+    display: block;
+    padding: 10px 25px;
+    color: #c7c7c7;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.content {
+    padding: 40px 0;
+}
+
+.content h2 {
+    font-size: 3em;
+    color: darkgrey;
+    text-shadow: 1px 1px 2px grey;
+    text-transform: lowercase;
+    letter-spacing: -4px;
+    word-spacing: 8px;
+    line-height: 1;
+    text-align: center;
+}
+
+.wyr {
+    color: rgb(255, 231, 22);
+}
+
+.main {
+    margin: 50px 50px 250px 50px;
+    padding: 10px;
+    color: grey;
+}
+
+.empty {
+    margin-bottom: 250px;
+}
+
+.bottom {
+    box-shadow: 0 -5px 5px grey;
+    background-image: url(images/footer.png);
+    background-size: cover;
+}
+
+.zebra {
+    width: 400px;
+    transition: all 1s ease;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    bottom: 200px;
+    margin-bottom: -180px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px grey;
+}
+
+@media all and (max-width: 500px) {
+    .zebra {
+        width: 300px;
+        transition: all 1s ease;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        bottom: 150px;
+        margin-bottom: -130px;
+        border-radius: 50%;
+        box-shadow: 2px 2px 5px grey;
+    }
+}
+
+.zebra:hover {
+    transform: rotate(5deg);
+}
+
+.tour {
+    background-image: url(images/footermenu.png);
+    background-size: cover;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.tour ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.tour li {
+    width: 33%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -4px;
+    text-align: center;
+}
+
+.tour a:link, .tour a:visited {
+    display: block;
+    text-decoration: none;
+    text-shadow: 0 1px 2px grey;
+    color: rgb(184, 59, 112);
+    font-weight: bold;
+}
+
+.tour a:hover, .tour a:active {
+    display: block;
+    text-decoration: none;
+    text-shadow: 0 1px 2px grey;
+    color: rgb(255, 231, 22);
+    font-weight: bold;
+}
+
+.tour a.grey:link, .tour a.grey:visited {
+    display: block;
+    text-decoration: none;
+    text-shadow: none;
+    color: #555555;
+    font-weight: bold;
+    font-family: Neoteric;
+    font-size: 1.5em;
+}
+
+.tour a.grey:hover, .tour a.grey:active {
+    display: block;
+    text-decoration: none;
+    text-shadow: none;
+    color: rgb(255, 231, 22);
+    font-weight: bold;
+}
+
+.kontakt-ikona {
+    vertical-align: bottom;
+    height: 25px;
+}
+
+.tel {
+    padding: 0 11px;
+}
+
+.pole {
+    padding: 5px;
+    border: 0;
+    background: #eeeeee;
+}
+
+.img-left {
+    float: left;
+    margin: 0 20px 20px 0;
+    width: 150px;
+}
+
+.img-zamow {
+    width: 100px;
+}
+
+.clear {
+    clear: both;
+}
+
+.th-left {
+    text-align: left;
+}
+
+.th-right {
+    text-align: right;
+}
+
+.osoba {
+    width: 50%;
+    float: left;
+}
+
+.jakpracuje {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+}
+
+.uwaga {
+    color: red;
+}
+
+footer {
+    padding: 10px 20px;
+    margin: 0 auto;
+    text-align: center;
+    color: grey;
+    background-image: url(images/footer.png);
+    background-size: cover;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.plansza {
+    min-width: 200px;
+    width: 25%;
+    margin: 0 auto;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#zamow {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#zamow label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+input[type=radio], input[type=checkbox]
+{
+    display: none;
+}
+
+input[type=checkbox]:checked + label
+{
+    background: pink;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+}
+
+input[type=submit] {
+    border: 2px outset grey;
+    border-radius: 5px;
+    background: rgb(184, 59, 112);
+    color: white;
+    padding: 10px;
+}
+
+.zaznaczony td {
+    background: pink;
+}
+
+.k {
+    text-align: right;
+}
+
+#suma {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background: white;
+    padding: 20px;
+    box-shadow: 2px 2px 3px grey;
+}
