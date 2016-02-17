@@ -6,6 +6,7 @@
                     <img src="ikonki/girl.png" alt="" class="img-left">
                     <h3>Milena</h3>
                     <p>Grafika, copywriting</p>
+                    <p>Współtwórca (grafika i content) strony <a href="http://korektaistyl.pl">korektaistyl.pl</a></p>
                     <div class="clear"></div>
                 </div>
                 <div class="osoba">
