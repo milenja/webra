@@ -19,20 +19,19 @@ body {
     font-family: Lato;
 }
 
+.calosc {
+	display: flex;
+}
+
 .lewa {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: -4px;
-    width: 30%;
+    width: 20%;
     background-image: url(images/panelzebra.png);
     background-size: cover;
+	background-position: center bottom;
 }
 
 .prawa {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: -4px;
-    width: 66%;
+    width: 76%;
     padding: 0 2%;
 }
 
