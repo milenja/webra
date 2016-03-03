@@ -30,7 +30,7 @@ $webra = new Webra();
 						<li><a href="panel.php?p=dane">Moje dane</a></li>
 						<li><a href="panel.php?p=zamowienia">Moje zamówienia</a></li>
 						<?php
-						if (!empty($_SESSION['zamowienie']) && !(isset($_GET['p']) && $_GET['p'] == 'zamow')) {
+						if (!empty($_SESSION['zamowienie']) && !(isset($_GET['p']) && ($_GET['p'] == 'zamow' || $_GET['p'] == 'zatwierdz'))) {
 							?>
 						<li><a href="panel.php?p=zamow">Dokończ składanie zamówienia</a></li>
 							<?php
@@ -69,8 +69,9 @@ $webra = new Webra();
 					</ul>
 					<p>Całkowity koszt zamówienia: <?php echo $suma; ?>zł</p>
 					<p><?php echo $uwagi; ?></p>
-					// akceptacja regulaminu
-					<a href="zamow.php">Popraw zamówienie</a> | <a href="panel.php?p=zatwierdz">Potwierdź zamówienie</a>
+					<p><input type="checkbox" name="regulamin" id="akceptacjaRegulaminu"> Akceptuję <a href="index.php?p=regulamin">regulamin</a> (<a href="dokumenty/Regulamin_strony_internetowej.pdf">pobierz PDF</a>)</p>
+					<a href="index.php?p=zamow">Popraw zamówienie</a> | <a id="zatwierdzZamowienie" href="panel.php?p=zatwierdz">Potwierdź zamówienie</a>
+					<div id="regulaminInfo" style="display: none;"></div>
 					<?php
 				} elseif (isset($_GET['p']) && $_GET['p'] == 'zatwierdz') {
 					$webra->zamow();

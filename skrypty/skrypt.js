@@ -36,4 +36,14 @@ $(document).ready(function () {
 
     var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
     $('.lewa').height(height);
+    
+    $('#zatwierdzZamowienie').click(function(event) {
+        if($('#akceptacjaRegulaminu').prop('checked') === false) {
+            event.preventDefault();
+            $('#regulaminInfo').html('Musisz zaakceptować regulamin');
+            $('#regulaminInfo').slideDown(500);
+        } else {
+            $('#regulaminInfo').slideUp(500);
+        }
+    });
 });

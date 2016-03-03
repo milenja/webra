@@ -30,6 +30,9 @@ switch ($_GET['p']) {
 	case 'zarejestruj':
 		include 'zarejestruj.php';
 		break;
+    case 'regulamin':
+		include 'regulamin.php';
+		break;
 	default :
 		include '404.php';
 }
