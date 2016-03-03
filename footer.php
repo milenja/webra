@@ -10,6 +10,7 @@
             <footer>
                 <p>Projekt i wykonanie: webra.com.pl</p>
                 <p>Wszystkie prawa do treści oraz grafik zastrzeżone. Kopiowanie zabronione.</p>
+				<p>Strona korzysta z ciasteczek.</p>
                 <p>&copy; Webra 2015 - <?php echo date('Y'); ?></p>
             </footer>
         </section>
