@@ -3,13 +3,13 @@
 	<div class="main">
 		<div class="plansza">
 			<?php include 'flash.php'; ?>
-			<form action="index.php?p=zaloguj&zaloguj" method="post">
+			<form action="/index/zaloguj?zaloguj" method="post">
 				<p>Adres e-mail</p>
 				<input type="text" name="mail" class="pole">
 				<p>Hasło</p>
 				<input type="password" name="haslo" class="pole">
 				<p><input type="submit" value="Zaloguj się"></p>
-				<p>Nie masz jeszcze konta? <a href="index.php?p=zarejestruj">Zarejestruj się</a></p>
+				<p>Nie masz jeszcze konta? <a href="/index/zarejestruj">Zarejestruj się</a></p>
 			</form>
 		</div>
 	</div>

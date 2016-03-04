@@ -9,9 +9,9 @@
 			 */
 		}
 		?>
-		<p><img src="ikonki/napisz.png" alt="E-mail" class="kontakt-ikona"> <a href="mailto:kontakt@webra.com.pl">kontakt@webra.com.pl</a></p>
-		<p><img src="ikonki/zadzwon.png" alt="Telefon" class="kontakt-ikona tel"> <a href="tel:608 065 754">608 065 754</a></p>
-		<p><img src="ikonki/zadzwon.png" alt="Telefon" class="kontakt-ikona tel"> <a href="tel:605 110 810">605 110 810</a></p>
+		<p><img src="/ikonki/napisz.png" alt="E-mail" class="kontakt-ikona"> <a href="mailto:kontakt@webra.com.pl">kontakt@webra.com.pl</a></p>
+		<p><img src="/ikonki/zadzwon.png" alt="Telefon" class="kontakt-ikona tel"> <a href="tel:608 065 754">608 065 754</a></p>
+		<p><img src="/ikonki/zadzwon.png" alt="Telefon" class="kontakt-ikona tel"> <a href="tel:605 110 810">605 110 810</a></p>
 		<h3>Zadaj pytanie</h3>
 		<form action="?kw" method="post">
 			<p>Imię i nazwisko:</p>

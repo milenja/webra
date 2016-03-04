@@ -1,10 +1,10 @@
         <section class="bottom">
-            <img src="images/zebralogo.png" alt="Zebra" class="zebra">
+            <img src="/images/zebralogo.png" alt="Zebra" class="zebra">
             <div class="tour">
                 <ul>
-                    <li><a href="index.php?p=onas">Kim jesteśmy?</a></li>
-                    <li><a href="index.php?p=jakpracuje" class="grey">Jak pracuje<br>Webra</a></li>
-                    <li><a href="index.php?p=zamow">Złoż zamówienie</a></li>
+                    <li><a href="/index/onas">Kim jesteśmy?</a></li>
+                    <li><a href="/index/jakpracuje" class="grey">Jak pracuje<br>Webra</a></li>
+                    <li><a href="/index/zamow">Złoż zamówienie</a></li>
                 </ul>
             </div>
             <footer>

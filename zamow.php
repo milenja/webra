@@ -17,7 +17,7 @@
 				</tr>
 				<tr>
 					<td>
-						<img src="ikonki/szablon.png" alt="" class="img-zamow">
+						<img src="/ikonki/szablon.png" alt="" class="img-zamow">
 					</td>
 					<td>
 						<input type="checkbox" name="zamowienie[]" value="podstawa" id="podstawa" class="ch" <?php if (in_array('podstawa', $zam)) {
@@ -29,7 +29,7 @@
 				</tr>
 				<tr>
 					<td>
-						<img src="ikonki/content.png" alt="" class="img-zamow">
+						<img src="/ikonki/content.png" alt="" class="img-zamow">
 					</td>
 					<td>
 						<input type="checkbox" name="zamowienie[]" value="tresc" id="tresc" class="ch" <?php if (in_array('tresc', $zam)) {
@@ -42,7 +42,7 @@
 				<tr>
 
 					<td>
-						<img src="ikonki/formularz.png" alt="" class="img-zamow">
+						<img src="/ikonki/formularz.png" alt="" class="img-zamow">
 					</td>
 					<td>
 						<input type="checkbox" name="zamowienie[]" value="formularz" id="form" class="ch" <?php if (in_array('formularz', $zam)) {
@@ -56,7 +56,7 @@
 				<tr>
 
 					<td>
-						<img src="ikonki/galeria.png" alt="" class="img-zamow">
+						<img src="/ikonki/galeria.png" alt="" class="img-zamow">
 					</td>
 					<td>
 						<input type="checkbox" name="zamowienie[]" value="galeria" id="gal" class="ch" <?php if (in_array('galeria', $zam)) {
@@ -70,7 +70,7 @@
 				<tr>
 
 					<td>
-						<img src="ikonki/projekt.png" alt="" class="img-zamow">
+						<img src="/ikonki/projekt.png" alt="" class="img-zamow">
 					</td>
 					<td>
 						<input type="checkbox" name="zamowienie[]" value="projekt" id="projekt" class="ch" <?php if (in_array('projekt', $zam)) {
@@ -84,7 +84,7 @@
 				<tr>
 
 					<td>
-						<img src="ikonki/rwd.png" alt="" class="img-zamow">
+						<img src="/ikonki/rwd.png" alt="" class="img-zamow">
 					</td>
 					<td>
 						<input type="checkbox" name="zamowienie[]" value="rwd" id="rwd" class="ch" <?php if (in_array('rwd', $zam)) {
@@ -98,7 +98,7 @@
 				<tr>
 
 					<td>
-						<img src="ikonki/slider.png" alt="" class="img-zamow">
+						<img src="/ikonki/slider.png" alt="" class="img-zamow">
 					</td>
 					<td>
 						<input type="checkbox" name="zamowienie[]" value="slider" id="slider" class="ch" <?php if (in_array('slider', $zam)) {
@@ -112,7 +112,7 @@
 				<tr>
 
 					<td>
-						<img src="ikonki/statystyki.png" alt="" class="img-zamow">
+						<img src="/ikonki/statystyki.png" alt="" class="img-zamow">
 					</td>
 					<td>
 						<input type="checkbox" name="zamowienie[]" value="statystyki" id="stat" class="ch" <?php if (in_array('statystyki', $zam)) {

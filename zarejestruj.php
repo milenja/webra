@@ -3,7 +3,7 @@
 	<div class="main">
 		<div class="plansza">
 			<?php include 'flash.php'; ?>
-			<form action="index.php?p=zarejestruj&zarejestruj" method="post">
+			<form action="/index/zarejestruj?zarejestruj" method="post">
 				<p>Imię i nazwisko<br>LUB nazwa firmy</p>
 				<input type="text" name="nazwa" class="pole">
 				<p>Adres e-mail</p>

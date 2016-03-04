@@ -21,10 +21,10 @@ class Webra {
 		if ($haslo == $haslo2) {
 			$wynik = $this->db->query("INSERT INTO klienci (mail, haslo, nazwa, data_rej) VALUES ('$mail', '$haslo', '$nazwa', '$data_rej')");
 			$_SESSION['msg'] = 'Możesz się terez zalogować';
-			header("Location: index.php?p=zaloguj");
+			header("Location: /index/zaloguj");
 		} else {
 			$_SESSION['msg'] = 'Hasła się różnią';
-			header("Location: index.php?p=zarejestruj");
+			header("Location: /index/zarejestruj");
 		}
 	}
 
@@ -36,10 +36,10 @@ class Webra {
 				$_SESSION['zalogowano'] = 1;
 				$_SESSION['id_klienta'] = 0;
 				$_SESSION['admin'] = 1;
-				header("Location: panel.php");
+				header("Location: /panel");
 			} else {
 				$_SESSION['msg'] = 'Złe dane';
-				header("Location: index.php?p=zaloguj");
+				header("Location: /index/zaloguj");
 			}
 		} else {
 			$wynik = $this->db->query("SELECT * FROM klienci WHERE mail = '$mail'");
@@ -48,10 +48,10 @@ class Webra {
 				if ($haslo == $haslo_baza) {
 					$_SESSION['zalogowano'] = 1;
 					$_SESSION['id_klienta'] = $w['id'];
-					header("Location: panel.php");
+					header("Location: /panel");
 				} else {
 					$_SESSION['msg'] = 'Złe dane';
-					header("Location: index.php?p=zaloguj");
+					header("Location: /index/zaloguj");
 				}
 			}
 		}
@@ -67,7 +67,7 @@ class Webra {
 
 	public function wyloguj() {
 		session_destroy();
-		header("Location: index.php?p=zaloguj");
+		header("Location: /index/zaloguj");
 	}
 
 	function zamow() {
@@ -113,9 +113,9 @@ class Webra {
 		$uwagi = 'Uwagi: ' . $_POST['uwagi'];
 		$_SESSION['zamowienie'] = array($zamowienie, $uwagi);
 		if ($this->zalogowany()) {
-			header("Location: panel.php?p=zamow");
+			header("Location: /panel/zamow");
 		} else {
-			header("Location: zaloguj.php");
+			header("Location: /index/zaloguj");
 		}
 	}
 

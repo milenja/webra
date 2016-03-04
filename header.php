@@ -19,9 +19,9 @@ if (isset($_GET['zarejestruj'])) {
 		<meta charset="UTF-8">
 		<title>Webra - Unikalne strony WWW</title>
 		<meta name="viewport" content="width=device-width">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="/style.css">
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script src="skrypty/skrypt.js"></script>
+		<script src="/skrypty/skrypt.js"></script>
 	</head>
 	<body>
 		<div class="calosc">
@@ -30,11 +30,11 @@ if (isset($_GET['zarejestruj'])) {
 					<?php
 					if (!$webra->zalogowany()) {
 						?>
-						<a href="index.php?p=zaloguj">Zaloguj się</a> | <a href="index.php?p=zarejestruj">Zarejestruj się</a>
+						<a href="/index/zaloguj">Zaloguj się</a> | <a href="/index/zarejestruj">Zarejestruj się</a>
 						<?php
 					} else {
 						?>
-						<a href="panel.php">Panel</a> | <a href="panel.php?wyloguj">Wyloguj się</a>
+						<a href="/panel">Panel</a> | <a href="/panel/wyloguj">Wyloguj się</a>
 						<?php
 					}
 					?>
@@ -47,10 +47,10 @@ if (isset($_GET['zarejestruj'])) {
 				<div class="hp">
 					<nav>
 						<ul>
-							<li><a href="index.php">Home</a></li>
-							<li><a href="index.php?p=oferta">Oferta</a></li>
-							<li><a href="index.php?p=portfolio">Portfolio</a></li>
-							<li><a href="index.php?p=kontakt">Kontakt</a></li>
+							<li><a href="/index">Home</a></li>
+							<li><a href="/index/oferta">Oferta</a></li>
+							<li><a href="/index/portfolio">Portfolio</a></li>
+							<li><a href="/index/kontakt">Kontakt</a></li>
 						</ul>
 					</nav>
 				</div>

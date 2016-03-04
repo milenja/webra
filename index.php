@@ -1,41 +1,74 @@
-<?php include 'header.php'; ?>
-
 <?php
+$requested = empty($_SERVER['REQUEST_URI']) ? false : $_SERVER['REQUEST_URI'];
+if(substr($requested, -1) == '/') {
+    $requested = substr($requested, 0, -1);
+}
 
-switch ($_GET['p']) {
+$whichModule = explode('/', $requested);
+if($whichModule[1] == 'panel') {
+    include 'headerPanel.php';
+} else {
+    include 'header.php';
+}
+
+
+switch ( $requested ) {
 	case '':
+    case '/index':
 		include 'main.php';
 		break;
-	case 'zamow':
+	case '/index/zamow':
 		include 'zamow.php';
 		break;
-	case 'jakpracuje':
+	case '/index/jakpracuje':
 		include 'jakpracuje.php';
 		break;
-	case 'kontakt':
+	case '/index/kontakt':
 		include 'kontakt.php';
 		break;
-	case 'oferta':
+	case '/index/oferta':
 		include 'oferta.php';
 		break;
-	case 'onas':
+	case '/index/onas':
 		include 'onas.php';
 		break;
-	case 'portfolio':
+	case '/index/portfolio':
 		include 'portfolio.php';
 		break;
-	case 'zaloguj':
+	case '/index/zaloguj':
 		include 'zaloguj.php';
 		break;
-	case 'zarejestruj':
+	case '/index/zarejestruj':
 		include 'zarejestruj.php';
 		break;
-    case 'regulamin':
+    case '/index/regulamin':
 		include 'regulamin.php';
+		break;
+    case '/index/wyloguj':
+		include 'wyloguj.php';
+		break;
+    case '/panel':
+		include 'kontoPanel.php';
+		break;
+	case '/panel/zamow':
+		include 'zamowPanel.php';
+		break;
+	case '/panel/zatwierdz':
+		include 'zatwierdzPanel.php';
+		break;
+	case '/panel/dane':
+		include 'danePanel.php';
+		break;
+	case '/panel/zamowienia':
+		include 'zamowieniaPanel.php';
 		break;
 	default :
 		include '404.php';
 }
-?>
 
-<?php include 'footer.php'; ?>
+if($whichModule[1] == 'panel') {
+    include 'footerPanel.php';
+} else {
+    include 'footer.php';
+}
+?>
