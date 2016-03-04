@@ -1,8 +1,12 @@
 <?php
+/**
+ * Przygotowujemy odpowiednią część adresu URL do wyznaczenia routingu.
+ */
 $requested = empty($_SERVER['REQUEST_URI']) ? false : $_SERVER['REQUEST_URI'];
 if(substr($requested, -1) == '/') {
     $requested = substr($requested, 0, -1);
 }
+$requested = strtok($requested, '?');
 
 $whichModule = explode('/', $requested);
 if($whichModule[1] == 'panel') {
@@ -11,6 +15,10 @@ if($whichModule[1] == 'panel') {
     include 'header.php';
 }
 
+/**
+ * Poniżej znadują się wszystkie podstrony, które obsługujemy.
+ * Jeżeli URL wskazuje na coś, czego nie obslugujemy, to wyświetlamy błąd 404.
+ */
 
 switch ( $requested ) {
 	case '':
