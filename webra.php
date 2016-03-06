@@ -22,39 +22,31 @@ class Webra {
 			$wynik = $this->db->query("INSERT INTO klienci (mail, haslo, nazwa, data_rej) VALUES ('$mail', '$haslo', '$nazwa', '$data_rej')");
 			$_SESSION['msg'] = 'Możesz się terez zalogować';
 			header("Location: /index/zaloguj");
+            exit;
 		} else {
 			$_SESSION['msg'] = 'Hasła się różnią';
 			header("Location: /index/zarejestruj");
+            exit;
 		}
 	}
 
 	public function zaloguj() {
 		$mail = $_POST['mail'];
 		$haslo = $_POST['haslo'];
-		if ($mail == 'webra') {
-			if ($haslo == 'Webra123') {
-				$_SESSION['zalogowano'] = 1;
-				$_SESSION['id_klienta'] = 0;
-				$_SESSION['admin'] = 1;
-				header("Location: /panel");
-			} else {
-				$_SESSION['msg'] = 'Złe dane';
-				header("Location: /index/zaloguj");
-			}
-		} else {
-			$wynik = $this->db->query("SELECT * FROM klienci WHERE mail = '$mail'");
-			while ($w = $wynik->fetch_assoc()) {
-				$haslo_baza = $w['haslo'];
-				if ($haslo == $haslo_baza) {
-					$_SESSION['zalogowano'] = 1;
-					$_SESSION['id_klienta'] = $w['id'];
-					header("Location: /panel");
-				} else {
-					$_SESSION['msg'] = 'Złe dane';
-					header("Location: /index/zaloguj");
-				}
-			}
-		}
+        $wynik = $this->db->query("SELECT * FROM klienci WHERE mail = '$mail'");
+        while ($w = $wynik->fetch_assoc()) {
+            $haslo_baza = $w['haslo'];
+            if ($haslo == $haslo_baza) {
+                $_SESSION['zalogowano'] = 1;
+                $_SESSION['id_klienta'] = $w['id'];
+                header("Location: /panel");
+                exit;
+            } else {
+                $_SESSION['msg'] = 'Złe dane';
+                header("Location: /index/zaloguj");
+                exit;
+            }
+        }
 	}
 
 	public function zalogowany() {
@@ -64,10 +56,18 @@ class Webra {
 			return false;
 		}
 	}
+    
+    public function wymusLogowanie() {
+        if(!$this->zalogowany()) {
+            header("Location: /index/zaloguj");
+            exit;
+        }
+    }
 
 	public function wyloguj() {
 		session_destroy();
 		header("Location: /index/zaloguj");
+        exit;
 	}
 
 	function zamow() {
@@ -114,8 +114,10 @@ class Webra {
 		$_SESSION['zamowienie'] = array($zamowienie, $uwagi);
 		if ($this->zalogowany()) {
 			header("Location: /panel/zamow");
+            exit;
 		} else {
 			header("Location: /index/zaloguj");
+            exit;
 		}
 	}
 

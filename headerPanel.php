@@ -3,6 +3,7 @@ session_start();
 require 'config.php';
 include 'webra.php';
 $webra = new Webra();
+$webra->wymusLogowanie();
 ?>
     <!DOCTYPE html>
     <html lang="pl">

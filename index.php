@@ -19,7 +19,6 @@ if($whichModule[1] == 'panel') {
  * Poniżej znadują się wszystkie podstrony, które obsługujemy.
  * Jeżeli URL wskazuje na coś, czego nie obslugujemy, to wyświetlamy błąd 404.
  */
-
 switch ( $requested ) {
 	case '':
     case '/index':
