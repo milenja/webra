@@ -18,8 +18,9 @@ class Webra {
 		$haslo2 = $_POST['haslo2'];
 		$nazwa = $_POST['nazwa'];
 		$data_rej = date('Y-m-d H:i:s');
+		$rola = 'user';
 		if ($haslo == $haslo2) {
-			$wynik = $this->db->query("INSERT INTO klienci (mail, haslo, nazwa, data_rej) VALUES ('$mail', '$haslo', '$nazwa', '$data_rej')");
+			$wynik = $this->db->query("INSERT INTO klienci (mail, haslo, nazwa, data_rej, rola) VALUES ('$mail', '$haslo', '$nazwa', '$data_rej', '$rola')");
 			$_SESSION['msg'] = 'Możesz się terez zalogować';
 			header("Location: /index/zaloguj");
             exit;
