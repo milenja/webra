@@ -16,8 +16,8 @@
             <td>
                 <?php echo $z['status']; ?>
             </td>
-            <td>
-                <?php echo $z['koszt']; ?>
+            <td class="koszt">
+                <?php echo $z['koszt']; ?> zł
             </td>
         </tr>
         <?php

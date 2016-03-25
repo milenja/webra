@@ -12,7 +12,6 @@ class Webra {
 	}
 
 	public function zarejestruj() {
-		global $mysqli;
 		$mail = $_POST['mail'];
 		$haslo = $_POST['haslo'];
 		$haslo2 = $_POST['haslo2'];
@@ -84,7 +83,6 @@ class Webra {
 	}
 
 	public function zamowienia() {
-		global $mysqli;
 		$id_klienta = $_SESSION['id_klienta'];
 		$wynik = $this->db->query("SELECT * FROM zamowienia WHERE id_klienta = '$id_klienta'");
 		while ($w = $wynik->fetch_assoc()) {
@@ -97,7 +95,6 @@ class Webra {
 	}
 
 	public function dane() {
-		global $mysqli;
 		$id_klienta = $_SESSION['id_klienta'];
 		$wynik = $this->db->query("SELECT * FROM klienci WHERE id = '$id_klienta'");
 		while ($w = $wynik->fetch_assoc()) {
@@ -107,6 +104,20 @@ class Webra {
 			$out[] = '';
 		}
 		return $out;
+	}
+    
+    public function zapiszDane() {
+        $id = $_POST['id'];
+		$mail = $_POST['mail'];
+		$numer_tel = $_POST['numer_tel'];
+		$ulica = $_POST['ulica'];
+		$nazwa = $_POST['nazwa'];
+        $miejscowosc = $_POST['miejscowosc'];
+		$kod_pocztowy = $_POST['kod_pocztowy'];
+        $wynik = $this->db->query("UPDATE klienci SET mail = '$mail', nazwa = '$nazwa', numer_tel = '$numer_tel', ulica = '$ulica', kod_pocztowy = '$kod_pocztowy', miejscowosc = '$miejscowosc' WHERE id = '$id'");
+        $_SESSION['msg'] = 'Dane zostały zapisane';
+        header("Location: /panel/dane");
+        exit;
 	}
 
 	public function zlozZamowienie() {

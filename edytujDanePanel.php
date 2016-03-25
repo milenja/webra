@@ -4,51 +4,54 @@
 					foreach ($webra->dane() as $d) {
 						if ($d != '') {
 							?>
+							<form action="/panel/zapisz-dane" method="post">
         <table class="pion">
-            <tr>
-                <th>ID klienta</th>
-                <td>
-                    <?php echo $d['id']; ?>
-                </td>
-            </tr>
             <tr>
                 <th>Adres e-mail</th>
                 <td>
-                    <?php echo $d['mail']; ?>
+                    <input type="text" name="mail" value="<?php echo $d['mail']; ?>">
                 </td>
             </tr>
             <tr>
                 <th>Imię i nazwisko
                     <br>LUB nazwa firmy</th>
                 <td>
-                    <?php echo $d['nazwa']; ?>
+                    <input type="text" name="nazwa" value="<?php echo $d['nazwa']; ?>">
                 </td>
             </tr>
             <tr>
                 <th>Numer telefonu</th>
                 <td>
-                    <?php echo $d['numer_tel']; ?>
+                    <input type="text" name="numer_tel" value="<?php echo $d['numer_tel']; ?>">
                 </td>
             </tr>
             <tr>
                 <th>Ulica i numer</th>
                 <td>
-                    <?php echo $d['ulica']; ?>
+                    <input type="text" name="ulica" value="<?php echo $d['ulica']; ?>">
                 </td>
             </tr>
             <tr>
                 <th>Kod pocztowy</th>
                 <td>
-                    <?php echo $d['kod_pocztowy']; ?>
+                    <input type="text" name="kod_pocztowy" value="<?php echo $d['kod_pocztowy']; ?>">
                 </td>
             </tr>
             <tr>
                 <th>Miejscowość</th>
                 <td>
-                    <?php echo $d['miejscowosc']; ?>
+                    <input type="text" name="miejscowosc" value="<?php echo $d['miejscowosc']; ?>">
+                </td>
+            </tr>
+            <tr>
+                <th>Zapisz</th>
+                <td>
+                       <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
+                    <input type="submit" value="Zapisz">
                 </td>
             </tr>
         </table>
+        </form>
         <?php
 						}
 					}

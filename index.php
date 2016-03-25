@@ -69,6 +69,12 @@ switch ( $requested ) {
 	case '/panel/zamowienia':
 		include 'zamowieniaPanel.php';
 		break;
+    case '/panel/edytuj-dane':
+		include 'edytujDanePanel.php';
+		break;
+    case '/panel/zapisz-dane':
+		include 'zapiszDanePanel.php';
+		break;
 	default :
 		include '404.php';
 }

@@ -1,0 +1,2 @@
+<?php
+$webra->zapiszDane();
