@@ -22,25 +22,25 @@
             <tr>
                 <th>Numer telefonu</th>
                 <td>
-                    <input type="text" name="numer_tel" value="<?php echo $d['numer_tel']; ?>">
+                    <input type="text" name="numer_tel" value="<?php echo $d['numer_tel']; ?>" placeholder="555 345 678">
                 </td>
             </tr>
             <tr>
                 <th>Ulica i numer</th>
                 <td>
-                    <input type="text" name="ulica" value="<?php echo $d['ulica']; ?>">
+                    <input type="text" name="ulica" value="<?php echo $d['ulica']; ?>" placeholder="ul. Długa 16 m. 4">
                 </td>
             </tr>
             <tr>
                 <th>Kod pocztowy</th>
                 <td>
-                    <input type="text" name="kod_pocztowy" value="<?php echo $d['kod_pocztowy']; ?>">
+                    <input type="text" name="kod_pocztowy" value="<?php echo $d['kod_pocztowy']; ?>" placeholder="00-666">
                 </td>
             </tr>
             <tr>
                 <th>Miejscowość</th>
                 <td>
-                    <input type="text" name="miejscowosc" value="<?php echo $d['miejscowosc']; ?>">
+                    <input type="text" name="miejscowosc" value="<?php echo $d['miejscowosc']; ?>"  placeholder="Wrszawa">
                 </td>
             </tr>
             <tr>
