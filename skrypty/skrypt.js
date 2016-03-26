@@ -28,7 +28,12 @@ $(document).ready(function () {
         }
     });
 
-    $('#zamow').click(function () {
+    $('#zamow tr').click(function () {
+        if($(this).find('.ch').is(':checked')) {
+            $(this).find('.ch').prop('checked', false);
+        } else {
+            $(this).find('.ch').prop('checked', true);
+        }
         oblicz();
     });
 	

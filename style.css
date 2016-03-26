@@ -327,6 +327,10 @@ footer p {
     border-collapse: collapse;
 }
 
+#zamow tr {
+    cursor: pointer;
+}
+
 #zamow label {
     display: block;
     width: 100%;
