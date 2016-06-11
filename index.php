@@ -8,7 +8,11 @@ if(substr($requested, -1) == '/') {
 }
 $requested = strtok($requested, '?');
 
-$whichModule = explode('/', $requested);
+if($requested !== false) {
+	$whichModule = explode('/', $requested);
+} else {
+	$whichModule = array('', 'index');
+}
 if($whichModule[1] == 'panel') {
     include 'headerPanel.php';
 } else {
