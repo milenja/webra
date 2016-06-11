@@ -34,7 +34,7 @@ if (isset($_GET['zarejestruj'])) {
 						<?php
 					} else {
 						?>
-						<a href="/panel">Panel</a> | <a href="/panel/wyloguj">Wyloguj się</a>
+						<a href="/panel">Panel</a> | <a href="/index/wyloguj">Wyloguj się</a>
 						<?php
 					}
 					?>
